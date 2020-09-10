@@ -15,6 +15,7 @@
     "postversion" : "git push && git push --tags",
     "prepublishOnly" : "npm run lint",
     "preversion" : "npm run lint",
+    "publish-public": "npm publish --access public",
     "test": "jest --config jestconfig.json",
     "version" : "npm run format && git add -A src"
   },
