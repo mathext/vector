@@ -1,5 +1,5 @@
 {
-  "name": "vector",
+  "name": "@mathext/vector",
   "version": "1.0.0",
   "description": "A simple library of vector operations",
   "main": "lib/index.js",
