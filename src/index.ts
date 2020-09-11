@@ -26,8 +26,8 @@ export default class Vector {
   public add(vector: Vector): Vector {
     return new Vector(this._x + vector.x, this._y + vector.y, this._z + vector.z);
   }
-  public divide(divisor: number): Vector {
-    return new Vector(this._x / divisor, this._y / divisor, this._z / divisor);
+  public divide(scalar: number): Vector {
+    return new Vector(this._x / scalar, this._y / scalar, this._z / scalar);
   }
   public multiply(scalar: number): Vector {
     return new Vector(this._x * scalar, this._y * scalar, this._z * scalar);

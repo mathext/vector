@@ -13,10 +13,10 @@
     "lint": "tslint -p tsconfig.json",
     "prepare" : "npm run build",
     "postversion" : "git push && git push --tags",
-    "prepublishOnly" : "npm run lint",
+    "prepublishOnly" : "npm test && npm run lint",
     "preversion" : "npm run lint",
     "publish-public": "npm publish --access public",
-    "test": "jest --config jestconfig.json",
+    "test": "jest --config jest.config.js",
     "version" : "npm run format && git add -A src"
   },
   "repository": {
