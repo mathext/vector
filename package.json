@@ -1,6 +1,6 @@
 {
   "name": "@mathext/vector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple library of vector operations",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,19 +11,24 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "postversion" : "git push && git push --tags",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
+    "patch-version": "npm version patch",
+    "prepare": "npm run build",
+    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
     "publish-public": "npm publish --access public",
     "test": "jest --config jest.config.js",
-    "version" : "npm run format && git add -A src"
+    "version": "npm run format && git add -A src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mathext/vector.git"
   },
-  "keywords": ["math", "mathext", "vector"],
+  "keywords": [
+    "math",
+    "mathext",
+    "vector"
+  ],
   "author": "Franklin Chieze",
   "license": "MIT",
   "bugs": {
