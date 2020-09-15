@@ -7,11 +7,23 @@ export default class Vector {
   }
 
   // Private fields
+  private static _unitVectorX: Vector = new Vector(1, 0, 0);
+  private static _unitVectorY: Vector = new Vector(0, 1, 0);
+  private static _unitVectorZ: Vector = new Vector(0, 0, 1);
   private _x: number;
   private _y: number;
   private _z: number;
 
   // Public properties
+  public static get unitVectorX(): Vector {
+    return Vector._unitVectorX;
+  }
+  public static get unitVectorY(): Vector {
+    return Vector._unitVectorY;
+  }
+  public static get unitVectorZ(): Vector {
+    return Vector._unitVectorZ;
+  }
   public get x(): number {
     return this._x;
   }
