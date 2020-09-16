@@ -99,3 +99,20 @@ describe('Given 2 vectors, a and b, initialized without a z component', () => {
         });
     });
 });
+
+describe('Given 2 unit vectors i and j along the x and y axes respectively', () => {
+    const i = Vector.unitVectorX;
+    const j = Vector.unitVectorY;
+
+    describe('When the unit vectors are scaled', () => {
+        const _3i = i.multiply(3);
+        const _2j = j.multiply(2);
+
+        test('Then the sum of the scaled unit vectors should be equal to vector [3, 2]', () => {
+            const linearCombination = _3i.add(_2j);
+            const a = new Vector(3, 2);
+
+            expect(linearCombination.to2D()).toEqual(a.to2D());
+        });
+    });
+});
